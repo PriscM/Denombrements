@@ -11,23 +11,23 @@ namespace Denombrements
         static void Main(string[] args)
         {
             //déclaration et saisie du choix
-            int c = 4;
-            while (c<0 || c>3)
+            string c = "4";
+            while (c !="0" || c!="1" || c != "2" || c != "3")
             {
                 Console.WriteLine("Permutation ...................... 1");
                 Console.WriteLine("Arrangement ...................... 2");
                 Console.WriteLine("Combinaison ...................... 3");
                 Console.WriteLine("Quitter .......................... 0");
                 Console.Write("Choix :                            ");
-                c = int.Parse(Console.ReadLine());
+                c = Console.ReadLine();
               
                 switch (c)
                 {
-                    case 0:
+                    case "0":
                         Environment.Exit(0); 
                         break;
 
-                    case 1:
+                    case "1":
                         Console.Write("nombre total d'éléments à gérer = ");
                         int n = int.Parse(Console.ReadLine());
                         long r = 1;
@@ -37,7 +37,7 @@ namespace Denombrements
                         }
                         Console.WriteLine(n + "! = " + r);
                         break;
-                    case 2:
+                    case "2":
                         Console.Write("nombre total d'éléments à gérer = ");
                         int t = int.Parse(Console.ReadLine());
                         Console.Write("nombre d'éléments dans le sous ensemble = ");
@@ -49,7 +49,7 @@ namespace Denombrements
                         }                       
                         Console.WriteLine("A(" + t + "/" + n + ") = " + r);
                         break;
-                    case 3:
+                    case "3":
                         //calcul combinaison
                         Console.Write("nombre total d'éléments à gérer = ");
                         t = int.Parse(Console.ReadLine());
